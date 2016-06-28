@@ -10,6 +10,7 @@
 #import "TAAbstractDotView.h"
 #import "TAAnimatedDotView.h"
 #import "TADotView.h"
+#import <Masonry.h>
 
 /**
  *  Default number of pages for initialization
@@ -104,7 +105,10 @@ static CGSize const kDefaultDotSize = {8, 8};
     self.shouldResizeFromCenter = kDefaultShouldResizeFromCenter;
 }
 
-
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self resetDotViews];
+}
 #pragma mark - Touch event
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
