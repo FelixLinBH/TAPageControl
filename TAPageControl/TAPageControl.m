@@ -10,7 +10,6 @@
 #import "TAAbstractDotView.h"
 #import "TAAnimatedDotView.h"
 #import "TADotView.h"
-#import <Masonry.h>
 
 /**
  *  Default number of pages for initialization
